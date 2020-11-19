@@ -1,0 +1,115 @@
+// layout
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header,
+.footer {
+  flex-shrink: 0;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.section {
+  min-height: 100vh;
+}
+
+// components
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+
+  min-height: 40px;
+  background-color: maroon;
+  color: white;
+
+  transition: 0.5s;
+
+  &.hidden {
+    transform: translateY(-100%);
+  }
+}
+
+.footer {
+  min-height: 40px;
+  background-color: maroon;
+  color: white;
+}
+
+.anchor {
+  $size: 64px;
+
+  position: fixed;
+  right: 64px;
+  bottom: 64px;
+
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  width: $size;
+  height: $size;
+
+  background-color: maroon;
+  color: white;
+
+  transition: 0.5s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &.hidden {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.progress {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+
+  .line {
+    height: 8px;
+    background-color: mediumseagreen;
+    transition: 0.5s;
+  }
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  background-color: grey;
+
+  &:nth-child(even) {
+    background-color: lightgrey;
+  }
+}
+
+.card {
+  overflow-y: scroll;
+  padding: 16px 8px;
+  width: 300px;
+  height: 400px;
+
+  background-color: white;
+
+  &.topShadow {
+  }
+
+  &.bottomShadow {
+  }
+}
